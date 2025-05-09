@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Socket.IO Chat App</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>we-chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container"></div>
-  <form id="send-container" autocomplete="off">
-    <input id="messageInp" type="text" placeholder="Type a message..." autocomplete="off" />
-    <button type="submit">Send</button>
-  </form>
+
+     <nav>
+    <img class="logo" src="logo.png" alt="img">   
+     <h1>welcome to iDiscuss Chat App</h1>
+
+</nav>
+
+
+  <div class="container">
+
+
+  </div>
+
+
+  
+<div class="send">
+    <form action="#" id="send-container">
+        <input type="text" name="messageinp" id="messageInp">
+        <button class="btn" type="submit">Send</button>
+    </form>
+</div>
+
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+   
