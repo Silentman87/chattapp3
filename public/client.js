@@ -7,13 +7,32 @@ const messageContainer = document.querySelector(".container");
 var audio = new Audio('ding.mp3');
 
 const append = (message, position) => {
-  const messageElement = document.createElement('div');
+  
+ 
+  
+  
+   const messageElement = document.createElement('div');
   messageElement.innerText = message;
   messageElement.classList.add('message', position);
-  messageContainer.append(messageElement);
+  // Add common styles
+  messageElement.style.cssText = 'padding: 10px 15px; margin: 10px; border-radius: 1rem; max-width: 60%; font-size: 16px; color: black; position: relative;';
+
+
+  // Add position-specific styles
   if (position === 'left') {
+    
     audio.play();
+    messageElement.style.backgroundColor = '#bcdfeb';
+    opacity: 0.7;
+    messageElement.style.alignSelf = 'flex-start';
+    audio.play();
+  } else if (position === 'right') {
+    messageElement.style.backgroundColor = '#bcdfeb';;
+    opacity: 0.7;
+    messageElement.style.alignSelf = 'flex-end';
   }
+
+  messageContainer.append(messageElement);
 };
 
 form.addEventListener("submit", (e) => {

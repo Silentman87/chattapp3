@@ -1,10 +1,19 @@
-body{
-    height: 100vh;
-   background-image:  url(/background.png);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
 }
 
+body {
+    height: 100vh;
+    background-image: url(/background.png);
+    background-size: cover;
+    background-position: center;
+}
 
-.logo{
+/* Logo Centered */
+.logo {
     display: block;
     margin: auto;
     width: 50px;
@@ -12,71 +21,176 @@ body{
     background: transparent;
 }
 
-h1{
+h1 {
     margin-top: 12px;
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-.container{
-    background: linear-gradient(135deg, hwb(204 64% 3%), rgb(51, 59, 65)); 
+/* Chat Container */
+.container {
     max-width: 995px;
-    border: 2px solid black;
-    margin: auto;
-    height: 60vh;
+    border: 2px solid rgb(49, 79, 99);
+    margin: 5% auto 23px auto;
+    height: 70vh;
     padding: 33px;
     overflow-y: auto;
-    margin-bottom: 23px;
+    border-radius: 1rem;
+    background-color: rgba(24, 21, 21, 0.789);
 }
 
-
-.message{
-  background-color: rgb(248, 244, 244);
- width: 24%;
- padding: 10px;
- margin: 17px 12px;
- border: 2px solid black;
- border-radius: 10px;
-
+/* Message Box */
+.message {
+    background-color: rgb(248, 244, 244);
+    width: 24%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    word-wrap: break-word;
 }
 
-.left{
- float: left;
- clear: both;
-
+.left {
+    float: left;
+    clear: both;
 }
 
-
-.right{
+.right {
     float: right;
     clear: both;
 }
 
-
-
-#send-container{
-     display: block;
-     margin: auto;
-     text-align: center;
-     max-width: 1085px;
-     width: 100%;
-
+/* Input & Send */
+#send-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 1085px;
+    width: 100%;
+    padding: 10px;
 }
 
-
-#messageInp{
+#messageInp {
     width: 80%;
     border: 2px solid black;
     border-radius: 6px;
     height: 34px;
-    font-size: 22px;
+    font-size: 16px;
 }
 
-.btn{
+.btn {
     width: 9%;
     cursor: pointer;
     border: 2px solid black;
     border-radius: 6px;
     height: 34px;
+    background-color: #040365;
+    color: white;
+}
+
+/* Flex Items Row */
+.items {
+    display: flex;
+    margin: auto;
+    gap: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #040365;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    padding: 0 1rem;
+}
+
+.navbar img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.navbar h1 {
+    color: white;
+    margin: auto;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0.8;
+}
+
+
+
+
+/* 📱 Responsive Enhancements */
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .message {
+        width: 60%; /* allow more room on small screens */
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #messageInp {
+        width: 65%;
+    }
+
+    .btn {
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: 55vh;
+        padding: 15px;
+    }
+
+    .message {
+        width: 70%;
+        font-size: 13px;
+    }
+
+    #messageInp {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 30%;
+        font-size: 13px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar img {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .navbar h1 {
+        margin: 0;
+        text-align: center;
+    }
 }

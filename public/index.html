@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>we-chat</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
-     <nav>
-    <img class="logo" src="/logo.png" alt="img">   
-     <h1>welcome to iDiscuss Chat App</h1>
+<nav>
+    
+   <div class="navbar">
+
+       <div class="items">
+        <i class="fa-solid fa-comments" style="color: plum; font-size: 28px;  "> </i> 
+
+        <h1>CHATAPP</h1>
+         </div>
+    </div>
 
 </nav>
 
-
+  
   <div class="container">
-
+      <div class="particle-container"></div> 
 
   </div>
 
@@ -24,7 +33,7 @@
   
 <div class="send">
     <form action="#" id="send-container">
-        <input type="text" name="messageinp" id="messageInp">
+        <input type="text" name="messageinp" id="messageInp" placeholder="type your message here...">
         <button class="btn" type="submit">Send</button>
     </form>
 </div>
@@ -32,9 +41,17 @@
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
+  
 </body>
 </html>
 
+
+
+
+
+
+
+   
 
 
 
